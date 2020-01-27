@@ -1,0 +1,9 @@
+body {
+    display: flex;
+
+    * {
+        display: block;
+    }
+}
+
+@import 'modules/module';
