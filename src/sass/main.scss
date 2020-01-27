@@ -1,9 +1,10 @@
 body {
-    display: flex;
+    display: block;
 
     * {
         display: block;
     }
 }
 
-@import 'modules/module';
+@import "./node_modules/bulma/bulma";
+@import "modules/module";
