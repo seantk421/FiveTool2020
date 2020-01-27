@@ -6,7 +6,7 @@ FiveTool WordPress Theme Updated for 2020
 
 - This branch includes webpack to bundle the CSS and JS files. Entry points are below.
 
-<ul>
+<ul style="margin-left: 20px;">
 <li>/src/js/main.js</li>
 <li>/src/sass/main.scss</li>
 </ul>
@@ -15,7 +15,7 @@ FiveTool WordPress Theme Updated for 2020
 
 Node Tasks 
 
-<ul>
+<ul style="margin-left: 20px;">
 <li>'npm run dev' - Runs webpack with watch enabled </li>
 <li>'npm run build' - Outputs finalized JS and CSS files under /dist</li>
 </ul>
