@@ -28,9 +28,7 @@
 
 		<nav id="site-navigation" class="navbar is-fixded-top" role="navigation" aria-label="main navigation">	
 			<div class="navbar-brand">
-				<a class="navbar-item" href="https://bulma.io">
-					<?php the_custom_logo(); ?>
-				</a>
+				<?php the_custom_logo(); ?>
 				<a role="button" class="navbar-burger" aria-controls="primary-menu" aria-expanded="false" data-target="navMenu" aria-label="menu">
 					<span aria-hidden="true"></span>
 					<span aria-hidden="true"></span>
