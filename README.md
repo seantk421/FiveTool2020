@@ -10,3 +10,8 @@ FiveTool WordPress Theme Updated for 2020
 /src/sass/main.scss
 
 - Still includes the default underscores sass files. Probably will be removed and replaced with Bulma CSS framework.
+
+Node Tasks 
+
+'npm run dev' - Runs webpack with watch enabled
+'npm run build' - Outputs finalized JS and CSS files under /dist
