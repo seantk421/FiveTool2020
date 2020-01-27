@@ -13,5 +13,5 @@ FiveTool WordPress Theme Updated for 2020
 
 Node Tasks 
 
-'npm run dev' - Runs webpack with watch enabled
+'npm run dev' - Runs webpack with watch enabled <br />
 'npm run build' - Outputs finalized JS and CSS files under /dist
