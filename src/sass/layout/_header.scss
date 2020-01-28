@@ -1,7 +1,42 @@
 header.site-header {
     .navbar-brand {
-        a img {
-            max-height: inherit;
+        a {
+            max-width: 50%;
+
+            img {
+                max-height: inherit;
+            }
+        }
+    }
+
+    .navbar {
+        .navbar-menu {
+            display: flex;
+            max-height: 0;
+            overflow: hidden;
+            transition: all .3s ease;
+        }
+
+        &.toggled {
+            .navbar-menu {
+                max-height: 500px;
+                transition: all .3s ease;
+            }
+        }
+    }
+
+
+    @include desktop() {
+        .navbar-brand {
+            a {
+                max-width: inherit;
+            }
+        }
+
+        .navbar {
+            .navbar-menu {
+                max-height: inherit;
+            }
         }
     }
 }
