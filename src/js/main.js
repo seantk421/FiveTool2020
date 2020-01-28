@@ -1,1 +1,3 @@
-console.log("hi2");
+import HeroBlock from "./blocks/hero";
+
+HeroBlock.init();

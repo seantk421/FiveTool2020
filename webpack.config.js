@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   mode: "production",
-  entry: ["./src/js/main.js", "./src/sass/main.scss"],
+  entry: ["./src/js/main.js", "./src/sass/main.scss", "./src/sass/author.scss"],
 
   output: {
     path: path.resolve(__dirname, "dist"),

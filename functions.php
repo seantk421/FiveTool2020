@@ -117,33 +117,24 @@ function fivetoolagency_widgets_init() {
 add_action( 'widgets_init', 'fivetoolagency_widgets_init' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue custom scripts (css files)
  */
-function fivetoolagency_scripts() {
-	// wp_enqueue_style( 'fivetoolagency-style', get_stylesheet_uri() );
+require get_template_directory() . '/inc/custom-styles.php';
 
-	wp_enqueue_script( 'fivetoolagency-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+/**
+ * Enqueue custom scripts (js files)
+ */
+require get_template_directory() . '/inc/custom-scripts.php';
 
-	wp_enqueue_script( 'fivetoolagency-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+/**
+ * Custom MCE Styles
+ */
+require get_template_directory() . '/inc/custom-mce-styles.php';
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-
-	wp_enqueue_style( 
-		'fivetoolagency-custom-styling', 
-		get_template_directory_uri() . '/dist/main.bundle.css', 
-		array(), 
-		'20200127');
-
-	wp_enqueue_script( 
-		'fivetoolagency-custom-javascript', 
-		get_template_directory_uri() . '/dist/main.bundle.js', 
-		array(), 
-		'20200127', 
-		true );
-}
-add_action( 'wp_enqueue_scripts', 'fivetoolagency_scripts' );
+/**
+ * Custom Post Types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
 
 /**
  * Implement the Custom Header feature.

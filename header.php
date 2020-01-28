@@ -25,33 +25,34 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'fivetoolagency' ); ?></a>
 
 	<header id="masthead" class="site-header">
-
-		<nav id="site-navigation" class="navbar is-fixded-top" role="navigation" aria-label="main navigation">	
-			<div class="navbar-brand">
-				<?php the_custom_logo(); ?>
-				<a role="button" class="navbar-burger" aria-controls="primary-menu" aria-expanded="false" data-target="navMenu" aria-label="menu">
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-					<span aria-hidden="true"></span>
-				</a>	
-			</div>
-			<div class="navbar-menu">
-				<div class="navbar-end">
-					<?php
-						wp_nav_menu( array(
-							'theme_location'    => 'primary',
-							'depth'             => 2,
-							'container'         => false,
-							// 'items_wrap'     => 'div',
-							'menu_class'        => 'navbar-end',
-							'menu_id'           => 'primary-menu',
-							'after'             => "</div>",
-							'walker'            => new Navwalker())
-						);
-					?>
+		<div class="container">
+			<nav id="site-navigation" class="navbar is-fixded-top" role="navigation" aria-label="main navigation">	
+				<div class="navbar-brand">
+					<?php the_custom_logo(); ?>
+					<a role="button" class="navbar-burger" aria-controls="primary-menu" aria-expanded="false" data-target="navMenu" aria-label="menu">
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+						<span aria-hidden="true"></span>
+					</a>	
 				</div>
-			</div>
-		</nav>
+				<div class="navbar-menu">
+					<div class="navbar-end">
+						<?php
+							wp_nav_menu( array(
+								'theme_location'    => 'primary',
+								'depth'             => 2,
+								'container'         => false,
+								// 'items_wrap'     => 'div',
+								'menu_class'        => 'navbar-end',
+								'menu_id'           => 'primary-menu',
+								'after'             => "</div>",
+								'walker'            => new Navwalker())
+							);
+						?>
+					</div>
+				</div>
+			</nav>
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

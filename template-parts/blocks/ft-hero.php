@@ -1,5 +1,5 @@
 <?php 
-$blockClass = 'ft-hero';
+$blockClass = 'ft-hero ft-block';
 
 // Define the hero layout  
 // Add hero layout to the block wrapping class for custom styling.
