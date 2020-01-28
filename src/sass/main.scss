@@ -1,9 +1,18 @@
 body {
-    display: flex;
+    display: block;
 
     * {
         display: block;
     }
 }
 
-@import 'blocks/ft-hero';
+@import "../vendor/bulma/bulma";
+
+@import "tools/mixins";
+@import "tools/variables";
+
+@import "global/accessibility";
+
+@import "layout/header";
+
+@import "blocks/ft-hero";

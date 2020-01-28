@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'fivetoolagency_widgets_init' );
  * Enqueue scripts and styles.
  */
 function fivetoolagency_scripts() {
-	wp_enqueue_style( 'fivetoolagency-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'fivetoolagency-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'fivetoolagency-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -129,6 +129,19 @@ function fivetoolagency_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_style( 
+		'fivetoolagency-custom-styling', 
+		get_template_directory_uri() . '/dist/main.bundle.css', 
+		array(), 
+		'20200127');
+
+	wp_enqueue_script( 
+		'fivetoolagency-custom-javascript', 
+		get_template_directory_uri() . '/dist/main.bundle.js', 
+		array(), 
+		'20200127', 
+		true );
 }
 add_action( 'wp_enqueue_scripts', 'fivetoolagency_scripts' );
 
@@ -158,4 +171,20 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+// Replace custom logo classes
+add_filter( 'get_custom_logo', 'change_logo_class' );
+
+function change_logo_class( $html ) {
+
+    // $html = str_replace( 'custom-logo', 'ft-logo', $html );
+    $html = str_replace( 'custom-logo-link', 'navbar-item', $html );
+
+    return $html;
+}
+
+require_once('inc/bulma-navwalker.php');
+register_nav_menus( array(
+    'primary' => __( 'Primary Menu', 'menuname' ),
+) );
 
