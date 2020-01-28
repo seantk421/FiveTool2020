@@ -14,9 +14,8 @@ To get started:
 
 <strong>Webpack for processing SASS and JS files</strong>
 
-Source JS and SASS files are stored under the /src directory.
-<br />
-Webpack is using babel for ES6 transpiling and postCSS for adding vendor prefixes to CSS files.
+<p>Source JS and SASS files are stored under the /src directory.</p>
+<p>Webpack is using babel for ES6 transpiling and postCSS for adding vendor prefixes to CSS files.</p>
 
 TODO: Detail src structure
 
@@ -30,6 +29,5 @@ To get started: (In terminal)
 
 <strong>ACF for block building</strong>
 
-This theme is based on using ACF for creating "blocks" of content that can be utilized within a flexible content drag and drop interface.
-<br />
-A hero block example has been created under /template-parts/blocks/ft-hero.php. ft-hero matches the name of the field group within the ACF flexible content group. page-modular.php loops through the flexible content field and based on the block it encouters will load the same name template file.
+<p>This theme is based on using ACF for creating "blocks" of content that can be utilized within a flexible content drag and drop interface.</p>
+<p>A hero block example has been created under /template-parts/blocks/ft-hero.php. ft-hero matches the name of the field group within the ACF flexible content group. page-modular.php loops through the flexible content field and based on the block it encouters will load the same name template file.</p>
