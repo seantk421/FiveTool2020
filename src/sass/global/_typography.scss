@@ -1,7 +1,36 @@
-.ft-p-lrg {
-    @include font-size(18);
+h1 {
+    @include font-size(42);
 }
 
-.ft-p-sm {
-    @include font-size(14);
+h2 {
+    @include font-size(32);
+}
+
+h3 {
+    @include font-size(28);
+}
+
+h4 {
+    @include font-size(24);
+}
+
+p,
+li {
+    @include font-size(18);
+
+    &.ft-p-lrg {
+        @include font-size(20);
+    }
+
+    &.ft-p-sm {
+        @include font-size(14);
+    }
+}
+
+ul {
+    list-style: disc;
+
+    li {
+        margin-left: 18px;
+    }
 }
