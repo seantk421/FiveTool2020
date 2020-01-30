@@ -3,6 +3,22 @@
     "title": "Block | Hero",
     "fields": [
         {
+            "key": "field_5e32eb20a0a79",
+            "label": "Block Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5e30481c484b2",
             "label": "Layout",
             "name": "ft_hero_layout",
@@ -95,14 +111,51 @@
                     "mime_types": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e32eb30a0a7a",
+            "label": "Advanced Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5e32eb3aa0a7b",
+            "label": "Avanced Options",
+            "name": "ft_advanced_opt_cl",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5e304d46f0eb9"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "block",
                 "operator": "==",
-                "value": "page-templates\/page-empty.php"
+                "value": "acf\/hero"
             }
         ]
     ],
@@ -114,5 +167,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580226739
+    "modified": 1580395449
 }

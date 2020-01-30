@@ -1,15 +1,30 @@
 <?php 
 // Default block classes
-$blockClass = 'ft-hero ft-block';
+$blockClass = '';
 
 // Define the hero layout  
 // Add hero layout to the block wrapping class for custom styling.
-if($hero_layout = get_sub_field('ft_hero_layout')) {
+if($hero_layout = get_field('ft_hero_layout')) {
     $blockClass .= ' ' . $hero_layout;
 }
 
 $styleString = '';
 // TODO: Check for advanced block options
+
+// Create id attribute allowing for custom "anchor" value.
+$id = 'ft-hero-' . $block['id'];
+if( !empty($block['anchor']) ) {
+    $id = $block['anchor'];
+}
+
+// Create class attribute allowing for custom "className" and "align" values.
+$className = 'ft-hero';
+if( !empty($block['className']) ) {
+    $className .= ' ' . $block['className'];
+}
+if( !empty($block['align']) ) {
+    $className .= ' align' . $block['align'];
+}
 
 if($hero_layout === 'ft-hero-st') {
     
@@ -30,7 +45,7 @@ if($hero_layout === 'ft-hero-st') {
             ?>
 
             <!-- FT Standard Hero -->
-            <section class="<?php echo $blockClass ?> bkg-cover" <?php echo $styleString ?>>
+            <section id="<?php echo $id; ?>" class="<?php echo $blockClass . ' ' . $className ?> bkg-cover" <?php echo $styleString ?>>
                 <div class="container">
                     <?php if($heroContent = get_sub_field('ft_hero_content')) {
                         echo $heroContent;

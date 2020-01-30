@@ -174,8 +174,43 @@ function change_logo_class( $html ) {
     return $html;
 }
 
+// REGISTER CUSTOM NAV
 require_once('inc/bulma-navwalker.php');
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'menuname' ),
 ) );
 
+add_theme_support('align-wide');
+add_theme_support('align-full');
+
+// REGISTER BLOCKS
+function register_acf_block_types() {
+
+    // register a testimonial block.
+    acf_register_block_type(array(
+        'name'              => 'hero',
+        'title'             => __('Hero'),
+        'description'       => __('A custom hero block.'),
+        'render_template'   => 'template-parts/blocks/ft-hero/ft-hero.php',
+        'category'          => 'formatting',
+        'icon'              => 'admin-comments',
+		'keywords'          => array( 'hero' ),
+		'align' 			=> 'full',
+		'enqueue_style' => get_template_directory_uri() . '/template-parts/blocks/ft-hero/ft-hero.css',
+		'supports' => array( 
+			'align' => array( 'left', 'center', 'right', 'full', 'wide' ),
+		),
+    ));
+}
+
+// Check if function exists and hook into setup.
+if( function_exists('acf_register_block_type') ) {
+    add_action('acf/init', 'register_acf_block_types');
+}
+
+
+// Add editor file
+function mytheme_add_editor_styles() {
+    add_editor_style( 'style-editor.css' );
+}
+add_action( 'admin_init', 'mytheme_add_editor_styles' );
