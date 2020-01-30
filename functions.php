@@ -157,6 +157,11 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Additional reusable block functions for adding classes and styles
+ */
+require get_template_directory() . '/inc/custom-block-functions.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
@@ -174,6 +179,7 @@ function change_logo_class( $html ) {
     return $html;
 }
 
+/// REGISTER PRIMARY NAV
 require_once('inc/bulma-navwalker.php');
 register_nav_menus( array(
     'primary' => __( 'Primary Menu', 'menuname' ),

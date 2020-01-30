@@ -31,15 +31,15 @@
                         "id": ""
                     },
                     "choices": {
-                        "small": "small spacing",
-                        "medium": "medium spacing",
-                        "large": "large spacing",
-                        "xl": "xl spacing"
+                        "sp-top-small": "small spacing",
+                        "sp-top-med": "medium spacing",
+                        "sp-top-lrg": "large spacing",
+                        "sp-top-xl": "xl spacing"
                     },
                     "default_value": [
                         "medium"
                     ],
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
                     "return_format": "value",
@@ -60,15 +60,15 @@
                         "id": ""
                     },
                     "choices": {
-                        "small": "small spacing",
-                        "medium": "medium spacing",
-                        "large": "large spacing",
-                        "xl": "xl spacing"
+                        "sp-btm-small": "small spacing",
+                        "sp-btm-med": "medium spacing",
+                        "sp-btm-lrg": "large spacing",
+                        "sp-btm-xl": "xl spacing"
                     },
                     "default_value": [
                         "medium"
                     ],
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "ui": 0,
                     "return_format": "value",
@@ -164,6 +164,29 @@
                     "default_value": ""
                 }
             ]
+        },
+        {
+            "key": "field_5e331e0445469",
+            "label": "Full Width Component",
+            "name": "ft_adv_width_full",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "yes": "Full Width"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -183,5 +206,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580224493
+    "modified": 1580408354
 }
