@@ -104,6 +104,13 @@
                 "operator": "==",
                 "value": "page-templates\/page-empty.php"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/ft-hero"
+            }
         ]
     ],
     "menu_order": 0,
@@ -114,5 +121,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1580226739
+    "modified": 1580394167
 }
