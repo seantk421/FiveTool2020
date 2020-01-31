@@ -70,3 +70,16 @@ function ftGetBlockStyles() {
         return $advBlockStyles .= '"';
     }
 }
+
+function ftGetBlockID() {
+	$id = 'ft-block-';
+
+	// Check for custom set ID in adv options
+	if($advID = get_sub_field('ft_adv_block_id')) {
+		$id .= $advID;
+	} else {
+		$id .= substr(uniqid(rand(), true), 4, 4);
+	}
+
+	return $id;
+}
