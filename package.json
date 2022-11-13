@@ -35,7 +35,7 @@
     "sass": "^1.22",
     "sass-loader": "^8.0.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   },
   "browserslist": [
     "last 3 version",
